@@ -8,7 +8,7 @@ A small full-stack learning app for fictional events and local seat reservations
 
 [Mobile screenshot](docs/screenshots/mobile.png) · [Learning guide](docs/LEARNING.md) · [Checks](https://github.com/yousefrajabi06-debug/gatherboard/actions)
 
-Screenshots show the running application with fictional sample data. They are not design mockups. The Netlify deployment uses the browser-only preview described below.
+Screenshots show the running application with fictional sample data. They are not design mockups. [Open the Netlify browser preview](https://yousef-gatherboard.netlify.app/). This deployment uses localStorage, not a hosted Express/SQLite backend; see the preview section below.
 
 ## Why this project
 
