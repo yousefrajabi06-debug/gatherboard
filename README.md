@@ -8,7 +8,7 @@ A small full-stack learning app for fictional events and local seat reservations
 
 [Mobile screenshot](docs/screenshots/mobile.png) · [Learning guide](docs/LEARNING.md) · [Checks](https://github.com/yousefrajabi06-debug/gatherboard/actions)
 
-Screenshots show the running application with fictional sample data. They are not design mockups. This repository does not currently advertise a hosted demo.
+Screenshots show the running application with fictional sample data. They are not design mockups. The Netlify deployment uses the browser-only preview described below.
 
 ## Why this project
 
@@ -100,3 +100,7 @@ The responsive UI includes visible keyboard focus and labeled controls. Browser 
 ## Authorship and AI assistance
 
 Created for Yousef Rajabi's student portfolio with AI assistance in planning, implementation, testing, and documentation. Original project code was built for this portfolio; it was not copied from another GitHub application. Third-party libraries remain credited through the Tech Stack and dependency files. This is learning work, not paid client work or invented professional experience.
+
+## Netlify browser preview
+
+Netlify builds with `npm run build:demo`. This mode uses `src/lib/demo.js` and localStorage, not Express or a hosted SQLite database. A visible banner explains that bookings are fictional, private to one browser, and not shared with other visitors. The original full-stack app still runs with `npm run dev` or `npm run build && npm start`. Clearing site data resets the preview. Browser storage is not encrypted, and concurrent edits in multiple tabs are not supported. Four additional Node tests cover demo persistence, capacity, duplicate aliases, invalid dates, and storage failures.

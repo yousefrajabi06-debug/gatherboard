@@ -4,7 +4,7 @@ import Dialog from "./components/Dialog";
 import EventCard from "./components/EventCard";
 import EventForm from "./components/EventForm";
 import useSavedState from "./hooks/useSavedState";
-import { request } from "./lib/api";
+import { request, demoMode } from "./lib/api";
 const validReservations = (value) =>
   Array.isArray(value) &&
   value.every(
@@ -27,7 +27,7 @@ export default function App() {
   const [view, setView] = useState("Explore");
   const [notice, setNotice] = useState("");
   const [reservations, saveReservations, storageError] = useSavedState(
-    "gatherboard.reservations.v1",
+    demoMode ? "gatherboard.demo.references.v1" : "gatherboard.reservations.v1",
     [],
     validReservations,
   );
@@ -131,8 +131,10 @@ export default function App() {
         </button>
       </section>
       <div className="demo-note">
-        <span>LOCAL LEARNING DEMO</span> Fictional events and aliases only.
-        Reservations are stored in a local SQLite database.
+        <span>{demoMode ? "BROWSER PREVIEW" : "LOCAL LEARNING DEMO"}</span>{" "}
+        {demoMode
+          ? "Fictional events only. Changes stay in this browser; no real bookings or shared database. The full Express + SQLite version is available in the source repository."
+          : "Fictional events and aliases only. Reservations are stored in a local SQLite database."}
       </div>
       <div className="toolbar">
         <div className="tabs">

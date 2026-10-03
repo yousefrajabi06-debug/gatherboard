@@ -1,4 +1,9 @@
+export const demoMode = import.meta.env.MODE === "demo";
 export async function request(path, options = {}) {
+  if (demoMode) {
+    const { createDemoRequest } = await import("./demo.js");
+    return createDemoRequest(localStorage)(path, options);
+  }
   let response;
   try {
     response = await fetch("/api" + path, {
