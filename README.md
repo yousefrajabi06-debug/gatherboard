@@ -4,11 +4,19 @@ A small full-stack learning app for fictional events and local seat reservations
 
 **A junior-level, AI-assisted portfolio learning project by Yousef Rajabi.**
 
+## Screenshot
+
 ![Desktop application screenshot](docs/screenshots/desktop.png)
 
 [Mobile screenshot](docs/screenshots/mobile.png) · [Learning guide](docs/LEARNING.md) · [Checks](https://github.com/yousefrajabi06-debug/gatherboard/actions)
 
-Screenshots show the running application with fictional sample data. They are not design mockups. [Open the Netlify browser preview](https://yousef-gatherboard.netlify.app/). This deployment uses localStorage, not a hosted Express/SQLite backend; see the preview section below.
+Screenshots show the running application with fictional sample data. They are not design mockups.
+
+## Live Demo
+
+[Open GatherBoard](https://yousef-gatherboard.netlify.app/)
+
+This hosted preview uses fictional browser-local data. To run the Express API and SQLite database, follow Installation below. It has no hosted accounts or shared reservations.
 
 ## Why this project
 
